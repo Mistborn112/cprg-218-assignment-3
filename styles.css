@@ -1,0 +1,149 @@
+/* General Page Setup */
+body {
+    font-family: sans-serif;
+    background-color: #cccccc;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #120323;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 3px solid #97bf04;
+}
+
+header h1 {
+    margin: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+main {
+    padding: 30px 10%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+#gallery-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+figure {
+    margin: 0;
+    border-bottom: 10px solid #97bf04;
+}
+
+figure img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+figcaption {
+    padding: 10px;
+    background-color: white;
+}
+
+figcaption h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #120323;
+}
+
+figcaption p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Mobile Devices (Less than 768px) */
+@media (max-width: 767px) {
+    nav ul {
+        padding: 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        width: 95%;
+        margin: 0 auto 10px;
+        border: 1px solid #97bf04;
+        border-radius: 5px;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+
+    #gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    #gallery-container figure {
+        margin-bottom: 20px;
+    }
+}
+
+/* Tablet Devices (Less than 1000px) */
+@media (max-width: 999px) {
+    #gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #gallery-container figure:nth-child(11) {
+        grid-column: span 2;
+    }
+}
+
+/* Desktop Devices (Greater than 1000px) */
+@media (min-width: 1000px) {
+    #gallery-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #gallery-container figure:nth-child(11) {
+        grid-column: span 2;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #d9043d;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer small {
+    font-size: 0.8rem;
+}
