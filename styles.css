@@ -1,13 +1,13 @@
 /* General Page Setup */
 body {
-    font-family: sans-serif;
-    background-color: #cccccc;
+    font-family: sans-serif; /*sans-serif font like requested */
+    background-color: #cccccc; /*page bg colour like requested*/
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #120323; 
+    background-color: #120323; /*header bg colour like requested */
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -15,11 +15,11 @@ header {
 
 header h1 {
     margin: 10px 0;
-    color: #97bf04; 
+    color: #97bf04; /* company name & img bottom border colour */
 }
 
 nav {
-    background-color: #d9043d; 
+    background-color: #d9043d; /* nav bg colour */
 }
 
 nav ul {
@@ -107,7 +107,7 @@ figcaption p {
     color: #555;
 }
 
-/* Mobile Devices (Less than 768px) */
+/* (Less than 768px) */
 @media (max-width: 767px) {
     nav ul {
         flex-direction: column;
@@ -140,15 +140,15 @@ figcaption p {
     }
 
     figure::before {
-        order: 2; 
+        order: 2; /* Green bar under the image */
     }
 
     figure img {
-        order: 1; 
+        order: 1; /* Ensure the image stays at the top */
     }
 
     figcaption {
-        order: 3; 
+        order: 3; /* Ensure text stays at the bottom */
     }
 }
 
@@ -177,7 +177,7 @@ figcaption p {
 
 /* Footer */
 footer {
-    background-color: #d9043d; 
+    background-color: #d9043d; /* footer bg colour */
     color: white;
     text-align: center;
     padding: 10px 0;
