@@ -67,6 +67,9 @@ figure {
     background-color: white; 
     padding: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 figure::before {
@@ -74,6 +77,7 @@ figure::before {
     display: block;
     height: 5px;
     background-color: #97bf04; 
+    order: 2; /* Green bar below the image */
 }
 
 figure img {
@@ -82,12 +86,14 @@ figure img {
     height: auto;
     margin: 0 auto;
     display: block;
+    order: 1; /* Image stays at the top */
 }
 
 figcaption {
     padding: 10px;
     background-color: white;
     text-align: center;
+    order: 3; /* Text stays at the bottom */
 }
 
 figcaption h3 {
@@ -132,7 +138,20 @@ figcaption p {
     #gallery-container figure {
         margin-bottom: 20px;
     }
+
+    figure::before {
+        order: 2; 
+    }
+
+    figure img {
+        order: 1; 
+    }
+
+    figcaption {
+        order: 3; 
+    }
 }
+
 
 /* (Less than 1000px) */
 @media (max-width: 999px) {
